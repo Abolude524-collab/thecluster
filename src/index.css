@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+
+  --color-cluster-electric: #6C63FF;
+  --color-signal-lime: #C7F36B;
+  --color-deep-graphite: #0B0D10;
+  --color-graphite: #12161C;
+  --color-elevated-graphite: #181D25;
+  --color-cloud: #F4F7FA;
+  --color-slate: #8D98A8;
+  --color-cluster-border: #252B34;
+  --color-coral: #FF6B6B;
+  --color-amber: #F4C95D;
+
+  --color-youtube: #FF0000;
+  --color-instagram: #E1306C;
+  --color-x: #1DA1F2;
+}
+
+:root {
+  --bg-primary: #0B0D10;
+  --bg-surface: #12161C;
+  --bg-elevated: #181D25;
+  --text-primary: #F4F7FA;
+  --text-secondary: #8D98A8;
+  --border-color: #252B34;
+  --accent-electric: #6C63FF;
+  --accent-lime: #C7F36B;
+  --status-error: #FF6B6B;
+  --status-warning: #F4C95D;
+}
+
+html.light {
+  --bg-primary: #F6F7F9;
+  --bg-surface: #FFFFFF;
+  --bg-elevated: #FFFFFF;
+  --text-primary: #111318;
+  --text-secondary: #687180;
+  --border-color: #E2E6EB;
+  --accent-electric: #6C63FF;
+  --accent-lime: #4E9A06;
+  --status-error: #E53E3E;
+  --status-warning: #DD6B20;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Typography Headings */
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Tabular numbers for clean analytics data alignment */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Glassmorphism subtle overlay if needed */
+.subtle-border {
+  border: 1px solid var(--border-color);
+}
